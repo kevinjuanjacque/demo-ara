@@ -2,12 +2,21 @@ import PdfViewer from './components/preview';
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@/components/ui/breadcrumb';
+
+import { Badge } from '@/components/ui/badge';
 
 export default function Home() {
   return (
@@ -16,7 +25,24 @@ export default function Home() {
 
       <div className="flex justify-center items-start ">
         <div className="w-full max-w-4xl">
-          <div className="flex justify-center items-center gap-12 mb-10">
+          <Breadcrumb className="mb-5">
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Inicio</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/Ciencias-sociales">
+                  Ciencias Sociales
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Gemini-LIGHTS: Herbig Ae/Be...</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+          <div className="flex justify-center items-center gap-12 mb-5">
             <img
               className=" aspect-square h-full rounded-full"
               src="https://books.google.com/books/content?id=yaf4EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl"
@@ -25,6 +51,20 @@ export default function Home() {
               Gemini-LIGHTS: Herbig Ae/Be and Massive T Tauri Protoplanetary
               Disks Imaged with Gemini Planet Imager
             </h1>
+          </div>
+          <div className="mb-10 px-10 flex gap-5 justify-center">
+            <Badge className="bg-secondaryOrange hover:bg-orange-600">
+              Ciencias Sociales
+            </Badge>
+            <Badge className="bg-secondaryOrange hover:bg-orange-600">
+              Cultura
+            </Badge>
+            <Badge className="bg-secondaryOrange hover:bg-orange-600">
+              Derechos humanos
+            </Badge>
+            <Badge className="bg-secondaryOrange hover:bg-orange-600">
+              Trabajo
+            </Badge>
           </div>
           <div className="w-full   flex flex-col justify-center items-center">
             <div className="max-w-4xl w-full flex">

@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import React from 'react';
+import { Separator } from '@/components/ui/separator';
+import { Badge } from '@/components/ui/badge';
 
 const Publications = () => {
   return (
@@ -10,6 +11,13 @@ const Publications = () => {
           Sección 1.10.33 de "de Finibus Bonorum et Malorum", escrito por Cicero
           en el 45 antes de Cristo
         </h4>
+        <Separator className="h-[0.5]" />
+        <div className=" flex gap-5">
+          <Badge className={'bg-secondaryOrange'}> RRHH </Badge>
+          <Badge className={'bg-secondaryOrange'}> Ciencias </Badge>
+          <Badge className={'bg-secondaryOrange'}> test </Badge>
+        </div>
+
         <p>
           Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
           praesentium voluptatum deleniti atque corrupti quos dolores et quas

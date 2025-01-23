@@ -1,3 +1,13 @@
+import { LoginForm } from '@/components/login-form';
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+
 const NavBar = () => {
   return (
     <nav className="bg-primary fixed z-10 top-0 left-0 w-full">
@@ -30,12 +40,21 @@ const NavBar = () => {
           </div>
 
           <div className="hidden md:flex space-x-4">
-            <a
-              href="/inicio"
-              className="text-black hover:bg-gray-300 bg-white py-1 px-3 rounded-xl font-semibold"
-            >
-              Entrar
-            </a>
+            <Sheet>
+              <SheetTrigger className="bg-secondaryOrange hover:bg-orange-600 text-white py-2 px-5  rounded-md">
+                Acceder a tu cuenta
+              </SheetTrigger>
+              <SheetContent>
+                <SheetHeader className={'hidden'}>
+                  <SheetTitle>Edit profile</SheetTitle>
+                  <SheetDescription VisuallyHidden>
+                    description
+                  </SheetDescription>
+                </SheetHeader>
+
+                <LoginForm className="mt-16" />
+              </SheetContent>
+            </Sheet>
           </div>
 
           {/* <!-- Botón para menú móvil --> */}
