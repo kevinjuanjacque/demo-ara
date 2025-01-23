@@ -30,7 +30,7 @@ export default function Home() {
             </form>
           </div>
         </section>
-        <section className="w-full flex flex-col justify-center items-center">
+        <section className="w-full flex flex-col justify-center items-center px-2 md:px-0">
           <Tabs defaultValue="discovery" className="w-full max-w-4xl">
             <TabsList className="">
               <TabsTrigger value="discovery" className="text-xl font-semibold">
@@ -137,7 +137,7 @@ export default function Home() {
                   <Label>Palabra calve</Label>
                   <Input placeholder="Tipo de documento, temas" />
                   <Separator className="my-5" />
-                  <div className="flex ">
+                  <div className="flex flex-col md:flex-row">
                     <div className="flex-1 flex flex-col gap-2">
                       <Label>Autor</Label>
                       <Input placeholder="Nombre de autor" />
