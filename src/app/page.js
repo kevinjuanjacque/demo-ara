@@ -1,101 +1,126 @@
-import Image from "next/image";
+import CardHome from './components/home/card';
+import { Cifra } from './components/home/cifra';
+import Publications from './components/home/publication';
+import Chatbot from './components/shared/chatbot';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className=" h-full pt-16">
+      <main className=" flex flex-col gap-16 justify-center items-center ">
+        <section className=" w-full bg-no-repeat bg-cover bg-[url('/images/banner.jpg')] h-96 text-white">
+          <div className=" bg-primary bg-opacity-85 h-[50%] ">
+            <h2 className="text-4xl text-center pt-5">
+              Bienvenidos a <span className="font-bold">Proyecto ARA</span>
+            </h2>
+            <form className=" flex items-center justify-center gap-2 pt-5">
+              <input
+                className=" rounded-lg bg-white text-lg px-2 py-1 w-64 text-black"
+                placeholder="Busquemos algo"
+              />
+              <button className="bg-secondaryOrange  text-lg text-white py-1 px-2 rounded-md transition duration-300 transform hover:bg-orange-600 hover:scale-105">
+                Buscar
+              </button>
+            </form>
+          </div>
+          <div className=" h-52 w-full flex flex-col items-center justify-end">
+            <div className=" w-[80%] h-16 bg-white flex flex-col justify-center items-center">
+              <h2 className="text-black text-4xl text-center font-bold">
+                Descubre
+              </h2>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h3 className="font-light text-black text-2xl text-center mt-6">
+            Revisa nuestras colecciones de recursos
+          </h3>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+          <div className=" flex flex-wrap items-center justify-center mt-5 gap-16 mb-5">
+            <CardHome
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title="Titulo"
+              category={'Matematicas'}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+            <CardHome
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title="Titulo"
+              category={'Artes'}
+            />
+            <CardHome
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title="Titulo"
+              category={'Ciencias'}
+            />
+            <CardHome
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title="Titulo"
+              category={'Ciencias Sociales'}
+            />
+            <CardHome
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title="Titulo"
+              category={'Gobierno'}
+            />
+            <CardHome
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title="Titulo"
+              category={'Medicina'}
+            />
+          </div>
+        </section>
+
+        <section className="bg-[url(/images/bg-cifras.jpg)] bg-cover bg-no-repeat w-full flex flex-col justify-center items-center text-white min-h-[45rem] pb-16 max">
+          <h2 className="text-4xl text-center pt-5 mb-12 font-bold">
+            Recursos
+          </h2>
+          <div className=" flex gap-28 flex-wrap justify-center h-[80%] items-center px-16 max-w-4xl">
+            <Cifra title={'Tesis'} num={10}>
+              <img
+                src="https://www.ucentral.cl/ucentral/site/artic/20211227/imag/foto_0000001320211227152112/docto.png"
+                alt=""
+              />
+            </Cifra>
+            <Cifra title={'Guias'} num={10}>
+              <img
+                src="https://www.ucentral.cl/ucentral/site/artic/20211227/imag/foto_0000001320211227152112/docto.png"
+                alt=""
+              />
+            </Cifra>
+            <Cifra title={'Lores'} num={30}>
+              <img
+                src="https://www.ucentral.cl/ucentral/site/artic/20211227/imag/foto_0000001320211227152112/docto.png"
+                alt=""
+              />
+            </Cifra>
+            <Cifra title={'Ipsus'} num={20}>
+              <img
+                src="https://www.ucentral.cl/ucentral/site/artic/20211227/imag/foto_0000001320211227152112/docto.png"
+                alt=""
+              />
+            </Cifra>
+            <Cifra title={'Pruebas'} num={5}>
+              <img
+                src="https://www.ucentral.cl/ucentral/site/artic/20211227/imag/foto_0000001320211227152112/docto.png"
+                alt=""
+              />
+            </Cifra>
+          </div>
+        </section>
+
+        <section className="max-w-4xl">
+          <h2 className="text-4xl text-center pt-5 mb-5 font-bold">
+            Ultimas Publicaciones
+          </h2>
+          <div className=" flex gap-12 flex-wrap justify-center items-center">
+            <Publications />
+            <Publications />
+            <Publications />
+            <Publications />
+            <Publications />
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Chatbot />
     </div>
   );
 }
